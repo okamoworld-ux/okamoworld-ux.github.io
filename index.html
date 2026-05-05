@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>耳鼻咽喉科 患者さん向け資料</title>
+<meta name="description" content="耳鼻咽喉科の生活指導・応急処置に関する患者さん向け資料を掲載しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f3eee2;
+  --paper: #fbf8ef;
+  --ink: #1a1a1a;
+  --ink-soft: #5a5a5a;
+  --accent: #1a3a5c;
+  --accent-deep: #0d2843;
+  --rule: #cdb98a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(at 20% 0%, rgba(26, 58, 92, 0.04) 0%, transparent 50%),
+    radial-gradient(at 80% 100%, rgba(139, 30, 30, 0.03) 0%, transparent 50%);
+  color: var(--ink);
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  line-height: 1.85;
+  min-height: 100vh;
+  padding: 4rem 1.25rem 5rem;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 680px; margin: 0 auto; }
+.eyebrow {
+  display: flex; align-items: center; gap: 1rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.72rem; letter-spacing: 0.32em;
+  color: var(--accent); font-weight: 500; text-transform: uppercase;
+}
+.eyebrow::before, .eyebrow::after {
+  content: ""; flex: 1; height: 1px; background: var(--rule);
+}
+.eyebrow span { white-space: nowrap; }
+h1 {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.45; text-align: center;
+  margin-bottom: 1rem; letter-spacing: 0.04em;
+}
+.subtitle {
+  text-align: center; font-size: 0.85rem;
+  color: var(--ink-soft); margin-bottom: 3.5rem;
+  letter-spacing: 0.18em;
+}
+.intro {
+  font-family: "Shippori Mincho", serif;
+  font-size: 0.95rem; line-height: 2;
+  text-align: center; color: var(--ink-soft);
+  margin: 0 auto 3.5rem; max-width: 28em;
+}
+.section-label {
+  font-family: "Shippori Mincho", serif;
+  font-size: 0.78rem; letter-spacing: 0.3em;
+  color: var(--accent); text-align: center;
+  margin-bottom: 1.5rem; text-transform: uppercase;
+}
+.list {
+  list-style: none;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.6) inset,
+    0 16px 32px -20px rgba(26, 58, 92, 0.2);
+}
+.list a {
+  display: flex; align-items: baseline;
+  justify-content: space-between;
+  padding: 1.4rem 1.75rem;
+  text-decoration: none; color: var(--ink);
+  border-bottom: 1px solid rgba(205, 185, 138, 0.5);
+  transition: background 0.2s ease; gap: 1rem;
+}
+.list li:last-child a { border-bottom: none; }
+.list a:hover { background: rgba(26, 58, 92, 0.04); }
+.list .title {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.05rem; font-weight: 500; letter-spacing: 0.05em;
+}
+.list .arrow {
+  font-size: 0.78rem; color: var(--accent);
+  letter-spacing: 0.2em; white-space: nowrap;
+}
+.meta {
+  margin-top: 4rem; font-size: 0.7rem;
+  color: var(--ink-soft); letter-spacing: 0.15em;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.25rem; text-align: center;
+}
+.meta p { margin: 0.25rem 0; }
+@media (max-width: 480px) {
+  body { padding: 2.5rem 1rem 4rem; }
+  .list a { padding: 1.2rem 1.25rem; }
+  .list .title { font-size: 0.95rem; }
+}
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow"><span>耳鼻咽喉科</span></p>
+  <h1>患者さん向け資料</h1>
+  <p class="subtitle">PATIENT INFORMATION ARCHIVE</p>
+
+  <p class="intro">
+    診察でお渡しした資料を、ご自宅でも参照していただけます。<br>
+    各リーフレットの右下にあるQRコードから、対応するページへアクセスできます。
+  </p>
+
+  <p class="section-label">— 掲載資料 —</p>
+
+  <ul class="list">
+    <li>
+      <a href="./nosebleed/">
+        <span class="title">鼻血が出たときの正しい止め方</span>
+        <span class="arrow">VIEW &rarr;</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="meta">
+    <p>本サイトの内容は一般的な情報提供を目的としています。</p>
+    <p>個別の症状については主治医にご相談ください。</p>
+  </div>
+</main>
+</body>
+</html>
