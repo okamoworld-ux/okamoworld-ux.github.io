@@ -4,168 +4,136 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>鼻血が出たときの正しい止め方｜耳鼻咽喉科 患者さん向け資料</title>
-<meta name="description" content="鼻血が出たときの応急処置を3ステップで解説した患者さん向けリーフレットです。">
+<title>鼻血が出たときは｜耳鼻咽喉科 患者さん向け資料</title>
+<meta name="description" content="鼻血が止まったあとの過ごし方と、もしまた出たときの止め方を解説した患者さん向け資料です。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #f3eee2;
-  --paper: #fbf8ef;
-  --ink: #1a1a1a;
-  --ink-soft: #5a5a5a;
-  --accent: #1a3a5c;
-  --accent-deep: #0d2843;
-  --rule: #cdb98a;
+:root{
+  --bg:#f3eee2; --paper:#fbf8ef; --ink:#1a1a1a; --ink-soft:#5a5a5a;
+  --accent:#1a3a5c; --accent-deep:#0d2843; --rule:#cdb98a; --audio:#8d45b5;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--bg);
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
   background-image:
-    radial-gradient(at 20% 0%, rgba(26, 58, 92, 0.04) 0%, transparent 50%),
-    radial-gradient(at 80% 100%, rgba(139, 30, 30, 0.03) 0%, transparent 50%);
-  color: var(--ink);
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 300;
-  line-height: 1.85;
-  min-height: 100vh;
-  padding: 3rem 1.25rem 5rem;
-  -webkit-font-smoothing: antialiased;
+    radial-gradient(at 20% 0%, rgba(26,58,92,.04) 0%, transparent 50%),
+    radial-gradient(at 80% 100%, rgba(139,30,30,.03) 0%, transparent 50%);
+  color:var(--ink); font-family:"Noto Sans JP",sans-serif; font-weight:300;
+  line-height:1.85; min-height:100vh; padding:3rem 1.25rem 5rem; -webkit-font-smoothing:antialiased;
 }
-main { max-width: 720px; margin: 0 auto; }
+main{max-width:720px;margin:0 auto;}
+.eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem;font-size:.72rem;letter-spacing:.32em;color:var(--accent);font-weight:500;text-transform:uppercase;}
+.eyebrow::before,.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule);}
+.eyebrow span{white-space:nowrap;}
+h1{font-family:"Shippori Mincho",serif;font-weight:700;font-size:clamp(1.75rem,5.5vw,2.75rem);line-height:1.45;text-align:center;margin-bottom:1.25rem;letter-spacing:.04em;}
+.subtitle{text-align:center;font-size:.88rem;color:var(--ink-soft);margin-bottom:2rem;letter-spacing:.18em;}
+.lead{font-family:"Shippori Mincho",serif;font-size:1rem;line-height:2;text-align:center;color:var(--ink-soft);margin:0 auto 2.5rem;max-width:28em;padding:0 .5rem;}
 
-.back {
-  display: inline-block;
-  margin-bottom: 2rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.25em;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: color 0.2s ease;
+/* 音声プレーヤー案内バー（画像の上・見つけやすく） */
+.audio-hint{
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  margin:0 auto 1rem;font-size:.8rem;color:var(--audio);letter-spacing:.1em;
 }
-.back:hover { color: var(--accent-deep); }
 
-.eyebrow {
-  display: flex; align-items: center; gap: 1rem;
-  margin-bottom: 2.5rem;
-  font-size: 0.72rem; letter-spacing: 0.32em;
-  color: var(--accent); font-weight: 500; text-transform: uppercase;
-}
-.eyebrow::before, .eyebrow::after {
-  content: ""; flex: 1; height: 1px; background: var(--rule);
-}
-.eyebrow span { white-space: nowrap; }
+.figure{background:var(--paper);padding:1.25rem;border:1px solid var(--rule);position:relative;
+  box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 24px 48px -24px rgba(26,58,92,.25),0 8px 16px -12px rgba(0,0,0,.1);}
+.figure::before{content:"";position:absolute;inset:6px;border:1px solid rgba(205,185,138,.5);pointer-events:none;}
 
-h1 {
-  font-family: "Shippori Mincho", serif;
-  font-weight: 700;
-  font-size: clamp(1.75rem, 5.5vw, 2.75rem);
-  line-height: 1.45; text-align: center;
-  margin-bottom: 1.25rem; letter-spacing: 0.04em;
+/* 画像と、その左上に重ねる音声ボタン */
+.leaflet-wrap{position:relative;display:block;z-index:1;}
+.leaflet-wrap img{display:block;width:100%;height:auto;}
+.audio-btn{
+  position:absolute;left:3%;top:2%;width:22%;
+  display:flex;flex-direction:column;align-items:center;gap:.35em;
+  background:none;border:none;cursor:pointer;padding:0;
 }
-.subtitle {
-  text-align: center; font-size: 0.88rem;
-  color: var(--ink-soft); margin-bottom: 3rem;
-  letter-spacing: 0.18em;
+.audio-btn .disc{
+  width:64%;aspect-ratio:1;border-radius:50%;background:var(--audio);
+  display:grid;place-items:center;box-shadow:0 3px 10px rgba(90,20,120,.35);
+  transition:transform .12s ease, background .12s ease;
 }
-.lead {
-  font-family: "Shippori Mincho", serif;
-  font-size: 1rem; line-height: 2;
-  text-align: center; color: var(--ink-soft);
-  margin: 0 auto 3rem; max-width: 28em;
-  padding: 0 0.5rem;
+.audio-btn:hover .disc{transform:scale(1.06);background:#7a37a0;}
+.audio-btn .disc svg{width:42%;height:42%;fill:#fff;}
+.audio-btn .lbl{font-size:.62rem;font-weight:500;color:var(--audio);letter-spacing:.06em;line-height:1.2;text-align:center;white-space:nowrap;}
+
+.actions{margin-top:2rem;display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap;}
+.btn{display:inline-block;padding:.85rem 2.25rem;background:var(--accent);color:var(--paper);text-decoration:none;
+  font-family:"Shippori Mincho",serif;font-size:.85rem;letter-spacing:.25em;border:none;cursor:pointer;transition:background .2s,transform .2s;}
+.btn:hover{background:var(--accent-deep);transform:translateY(-1px);}
+.disclaimer{margin-top:2rem;font-size:.72rem;color:var(--ink-soft);line-height:1.9;text-align:center;padding:0 .5rem;}
+.meta{margin-top:2.5rem;display:flex;justify-content:space-between;align-items:baseline;font-size:.72rem;color:var(--ink-soft);letter-spacing:.15em;border-top:1px solid var(--rule);padding-top:1.25rem;flex-wrap:wrap;gap:.5rem;}
+@media(max-width:480px){
+  body{padding:2rem 1rem 4rem;}
+  .figure{padding:.6rem;} .figure::before{inset:3px;}
+  .audio-btn .lbl{font-size:.5rem;}
 }
-.figure {
-  background: var(--paper);
-  padding: 1.25rem;
-  border: 1px solid var(--rule);
-  box-shadow:
-    0 1px 0 rgba(255,255,255,0.6) inset,
-    0 24px 48px -24px rgba(26, 58, 92, 0.25),
-    0 8px 16px -12px rgba(0,0,0,0.1);
-  position: relative;
-}
-.figure::before {
-  content: ""; position: absolute; inset: 6px;
-  border: 1px solid rgba(205, 185, 138, 0.5);
-  pointer-events: none;
-}
-.figure img {
-  display: block; width: 100%; height: auto;
-  position: relative; z-index: 1;
-}
-.actions {
-  margin-top: 2.5rem;
-  display: flex; justify-content: center;
-  gap: 0.75rem; flex-wrap: wrap;
-}
-.btn {
-  display: inline-block;
-  padding: 0.85rem 2.25rem;
-  background: var(--accent);
-  color: var(--paper);
-  text-decoration: none;
-  font-family: "Shippori Mincho", serif;
-  font-size: 0.85rem; letter-spacing: 0.25em;
-  border: none; cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-.btn:hover { background: var(--accent-deep); transform: translateY(-1px); }
-.meta {
-  margin-top: 3.5rem;
-  display: flex; justify-content: space-between;
-  align-items: baseline;
-  font-size: 0.72rem; color: var(--ink-soft);
-  letter-spacing: 0.15em;
-  border-top: 1px solid var(--rule);
-  padding-top: 1.25rem;
-  flex-wrap: wrap; gap: 0.5rem;
-}
-@media (max-width: 480px) {
-  body { padding: 2rem 1rem 4rem; }
-  .figure { padding: 0.6rem; }
-  .figure::before { inset: 3px; }
-  .eyebrow { font-size: 0.65rem; letter-spacing: 0.25em; }
-}
-@media print {
-  body { background: white; padding: 0; }
-  .actions, .eyebrow, .meta, .back { display: none; }
-  .figure { border: none; box-shadow: none; padding: 0; }
-  .figure::before { display: none; }
-  h1, .subtitle, .lead { display: none; }
+@media print{
+  body{background:white;padding:0;}
+  .actions,.eyebrow,.meta,.audio-hint,.audio-btn{display:none;}
+  .figure{border:none;box-shadow:none;padding:0;} .figure::before{display:none;}
+  h1,.subtitle,.lead,.disclaimer{display:none;}
 }
 </style>
 </head>
 <body>
 <main>
-  <a href="../" class="back">&larr; 資料一覧に戻る</a>
-
   <p class="eyebrow"><span>耳鼻咽喉科　患者さん向け資料</span></p>
-
-  <h1>鼻血が出たときの<br>正しい止め方</h1>
-  <p class="subtitle">応急処置・3ステップガイド</p>
-
+  <h1>鼻血が出たときは</h1>
+  <p class="subtitle">止まったあとの過ごし方・もしまた出たときの止め方</p>
   <p class="lead">
-    鼻血の多くは、正しい方法で15分間しっかり押さえれば止まります。<br>
-    まずは落ち着いて、下の手順をご覧ください。
+    鼻血の多くは、正しく押さえれば止まります。<br>
+    まずは落ち着いて、下の資料をご覧ください。
   </p>
 
+  <p class="audio-hint">🔊 左上の再生ボタンで、解説音声（約2分）を聞けます</p>
+
   <figure class="figure">
-    <img src="leaflet.png" alt="鼻血が出たときの3ステップ止血法と、止血後の生活指導">
+    <div class="leaflet-wrap">
+      <img src="leaflet.png" alt="鼻血が出たときの手当てと、止血後の生活指導">
+      <button class="audio-btn" id="audioBtn" type="button" aria-label="解説音声を再生する">
+        <span class="disc"><svg id="ico" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="lbl" id="lbl">音声解説</span>
+      </button>
+    </div>
   </figure>
 
   <div class="actions">
     <button class="btn" onclick="window.print()">印刷する</button>
   </div>
 
+  <p class="disclaimer">
+    ※この資料は一般的な情報提供を目的としたものです。診断・治療の代行ではありません。<br>
+    気になる症状や心配なことは、自己判断せず医療機関にご相談ください。
+  </p>
+
   <div class="meta">
-    <span>改訂日　2026年5月</span>
+    <span>改訂日　2026年7月</span>
     <span>耳鼻咽喉科</span>
   </div>
 </main>
+
+<!-- 音声ファイル（もりおきで作成後、ここに nosebleed.mp3 を置く。wavでも可） -->
+<audio id="voice" src="nosebleed.mp3" preload="none"></audio>
+
+<script>
+  const btn = document.getElementById('audioBtn');
+  const voice = document.getElementById('voice');
+  const ico = document.getElementById('ico');
+  const lbl = document.getElementById('lbl');
+  const PLAY = "M8 5v14l11-7z";
+  const PAUSE = "M6 5h4v14H6zM14 5h4v14h-4z";
+  btn.addEventListener('click', () => {
+    if (voice.paused) {
+      voice.play().then(() => { ico.querySelector('path').setAttribute('d', PAUSE); lbl.textContent = '再生中'; })
+        .catch(() => { lbl.textContent = '音声準備中'; });
+    } else {
+      voice.pause(); ico.querySelector('path').setAttribute('d', PLAY); lbl.textContent = '音声解説';
+    }
+  });
+  voice.addEventListener('ended', () => { ico.querySelector('path').setAttribute('d', PLAY); lbl.textContent = '音声解説'; });
+</script>
 </body>
 </html>
