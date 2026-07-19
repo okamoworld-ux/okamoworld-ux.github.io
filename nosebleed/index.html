@@ -64,6 +64,14 @@ h1{font-family:"Shippori Mincho",serif;font-weight:700;font-size:clamp(1.75rem,5
   font-family:"Shippori Mincho",serif;font-size:.85rem;letter-spacing:.25em;border:none;cursor:pointer;transition:background .2s,transform .2s;}
 .btn:hover{background:var(--accent-deep);transform:translateY(-1px);}
 .disclaimer{margin-top:2rem;font-size:.72rem;color:var(--ink-soft);line-height:1.9;text-align:center;padding:0 .5rem;}
+.transcript{margin-top:1.5rem;border:1px solid var(--rule);background:var(--paper);}
+.transcript>summary{cursor:pointer;padding:.9rem 1.25rem;font-family:"Shippori Mincho",serif;font-size:.9rem;color:var(--accent);letter-spacing:.05em;list-style:none;}
+.transcript>summary::-webkit-details-marker{display:none;}
+.transcript>summary::before{content:"▸　";}
+.transcript[open]>summary::before{content:"▾　";}
+.transcript .t-body{padding:0 1.5rem 1.5rem;font-size:.9rem;line-height:1.95;color:var(--ink-soft);}
+.transcript .t-body h3{font-size:.82rem;color:var(--accent);margin:1.1rem 0 .3rem;font-weight:500;letter-spacing:.05em;}
+.transcript .t-body p{margin:.2rem 0;}
 .meta{margin-top:2.5rem;display:flex;justify-content:space-between;align-items:baseline;font-size:.72rem;color:var(--ink-soft);letter-spacing:.15em;border-top:1px solid var(--rule);padding-top:1.25rem;flex-wrap:wrap;gap:.5rem;}
 @media(max-width:480px){
   body{padding:2rem 1rem 4rem;}
@@ -72,7 +80,7 @@ h1{font-family:"Shippori Mincho",serif;font-weight:700;font-size:clamp(1.75rem,5
 }
 @media print{
   body{background:white;padding:0;}
-  .actions,.eyebrow,.meta,.audio-hint,.audio-btn{display:none;}
+  .actions,.eyebrow,.meta,.audio-hint,.audio-btn,.transcript{display:none;}
   .figure{border:none;box-shadow:none;padding:0;} .figure::before{display:none;}
   h1,.subtitle,.lead,.disclaimer{display:none;}
 }
@@ -103,6 +111,32 @@ h1{font-family:"Shippori Mincho",serif;font-weight:700;font-size:clamp(1.75rem,5
   <div class="actions">
     <button class="btn" onclick="window.print()">印刷する</button>
   </div>
+
+  <details class="transcript">
+    <summary>📖 音声解説の全文（読み上げ内容）</summary>
+    <div class="t-body">
+      <p>鼻血は、いま止まっていれば心配いりません。ここでは、これから数日の過ごし方と、もしまた出たときの止め方を、続けてお伝えします。</p>
+
+      <h3>■ 再出血を防ぐ（止まったあと1〜2日）</h3>
+      <p>血が止まったあとの1日から2日は、かさぶたが取れやすく、また出血しやすい時期です。避けてほしいことは、大きく2つ。</p>
+      <p>ひとつ目は、血圧が上がること。激しい運動や、重い荷物を持つこと、強くいきむこと、それからお酒は、控えめに。便秘でいきむのも避けたいので、水分は多めに。</p>
+      <p>ふたつ目は、鼻をあたためること。熱いお風呂や熱いシャワー、熱いものや辛いものは、鼻の血の流れを増やして、また出やすくなります。当日は控えめに。</p>
+      <p>そのほか、鼻を強くかんだり、指でいじるのも、やめてください。</p>
+
+      <h3>■ もし、また出たときの止め方</h3>
+      <p>家でまた鼻血が出たときは、あわてないでください。ほとんどの鼻血は、正しく押さえれば止まります。</p>
+      <p>まず、いすに座って、少し前かがみに。上を向くと、血がのどに流れて飲み込んでしまうので、顔は下向きのままで。</p>
+      <p>次に、小鼻（こばな）——鼻の左右の、やわらかいふくらみを、指でしっかりつまみます。硬い骨ではなく、その手前です。</p>
+      <p>そのまま、15分間、時計で計りながら、手を離さずに押さえてください。途中で確認したくても、離すと、また出てきてしまいます。</p>
+      <p>15分で止まらなければ、もう一度、15分。それでも止まらないときは、小鼻をつまんだまま、受診してください。</p>
+
+      <h3>■ 受診の目安</h3>
+      <p>ふらつきや冷や汗、動悸があるとき、片方の鼻血を何度もくり返すときも、医療機関にご相談ください。</p>
+
+      <h3>■ お薬について</h3>
+      <p>血をサラサラにするお薬は、自分の判断でやめず、主治医にご相談を。まずは数日、そっと過ごしましょう。</p>
+    </div>
+  </details>
 
   <p class="disclaimer">
     ※この資料は一般的な情報提供を目的としたものです。診断・治療の代行ではありません。<br>
