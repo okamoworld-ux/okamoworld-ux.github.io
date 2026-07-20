@@ -78,11 +78,14 @@ h1{font-family:"Shippori Mincho",serif;font-weight:700;font-size:clamp(1.75rem,5
   .figure{padding:.6rem;} .figure::before{inset:3px;}
   .audio-btn .lbl{font-size:.5rem;}
 }
+@page{size:A4 portrait;margin:0;}
 @media print{
-  body{background:white;padding:0;}
-  .actions,.eyebrow,.meta,.audio-hint,.audio-btn,.transcript{display:none;}
-  .figure{border:none;box-shadow:none;padding:0;} .figure::before{display:none;}
-  h1,.subtitle,.lead,.disclaimer{display:none;}
+  html,body{margin:0;padding:0;background:#fff;width:210mm;}
+  main{max-width:none;margin:0;padding:0;}
+  .actions,.eyebrow,.meta,.audio-hint,.audio-btn,.transcript,h1,.subtitle,.lead,.disclaimer{display:none;}
+  .figure{border:none;box-shadow:none;padding:0;margin:0;} .figure::before{display:none;}
+  /* 画像をA4 1ページに必ず収める（縦長なので高さ基準でフィット・左右は自動余白） */
+  .leaflet-wrap img{max-height:100vh;width:auto;max-width:100%;margin:0 auto;display:block;}
 }
 </style>
 </head>
