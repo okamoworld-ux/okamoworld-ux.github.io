@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>穿刺吸引細胞診（FNA）の説明動画｜耳鼻咽喉科 患者さん向け資料</title>
+<style>
+:root{ --bg:#f3eee2; --paper:#fbf8ef; --ink:#1a1a1a; --ink-soft:#5a5a5a; --accent:#1a3a5c; --rule:#cdb98a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Sans",sans-serif;font-weight:300;line-height:1.85;min-height:100vh;padding:3rem 1.25rem 5rem;}
+main{max-width:720px;margin:0 auto;}
+.eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;font-size:.72rem;letter-spacing:.32em;color:var(--accent);font-weight:500;}
+.eyebrow::before,.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule);}
+h1{font-size:clamp(1.4rem,5vw,2rem);line-height:1.5;text-align:center;margin-bottom:1rem;}
+.lead{font-size:.95rem;text-align:center;color:var(--ink-soft);margin-bottom:2rem;}
+.frame{background:var(--paper);padding:1rem;border:1px solid var(--rule);}
+video{display:block;width:100%;border-radius:6px;background:#000;}
+.fallback{display:none;padding:.9rem 1rem;font-size:.9rem;border:1px solid var(--rule);background:var(--paper);margin-top:1rem;}
+.disclaimer{margin-top:2rem;font-size:.72rem;color:var(--ink-soft);line-height:1.9;text-align:center;}
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow"><span>耳鼻咽喉科　患者さん向け資料</span></p>
+  <h1>穿刺吸引細胞診（FNA）の説明動画</h1>
+  <p class="lead">これから受けていただく検査について、約2分の動画でご説明します。</p>
+  <div class="frame">
+    <video id="v" controls preload="metadata" src="https://okamo-patient-b416de20.okamoworld.workers.dev/me19if4pblyd3gz/fna-v1-1cfd87eb.mp4"></video>
+  </div>
+  <div class="fallback" id="fb">現在、動画を再生できません。検査について不明な点は、外来スタッフまたは主治医にお尋ねください。</div>
+  <p class="disclaimer">※この動画は一般的な説明です。個々の状況により内容が異なる場合があります。<br>不明な点や心配なことは、自己判断せず主治医にご相談ください。</p>
+</main>
+<script>
+  document.getElementById('v').addEventListener('error', function () {
+    this.style.display = 'none';
+    document.getElementById('fb').style.display = 'block';
+  });
+</script>
+</body>
+</html>
