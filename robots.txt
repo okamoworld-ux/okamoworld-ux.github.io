@@ -1,2 +1,4 @@
+# クロールは許可し、各ページの noindex メタで検索表示を防ぐ方式（2026-08-11 変更）
+# 旧方式（Disallow: /）はクローラが noindex を読めず「URLだけ検索結果に残る」抜け穴があった
 User-agent: *
-Disallow: /
+Allow: /
